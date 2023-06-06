@@ -14,16 +14,13 @@ using namespace std;
 int windowH = 1000;
 int windowW = 1000;
 
-
-
-
 float X = 450;
 float Y = 20;
 float comp = 103.2;
 float alt = 177.9;
 
 float Xinimigo = 400;
-float Yinimigo = 780;
+float Yinimigo = 20;
 float compinimigo = 225;
 float altinimigo = 225;
 
@@ -50,10 +47,10 @@ bool colisaoPerso() {
    else return false;
 }
 
-
 GLuint plane;
 GLuint enemy;
 GLuint fundo;
+
 GLuint carregaFundo(const char* arquivo) {
     GLuint idTextura = SOIL_load_OGL_texture(
         arquivo,        // ⬅️ do parâmetro
@@ -80,6 +77,7 @@ void desenhaFundo(int valorQualquer) {
 	}
 	glutTimerFunc(100, desenhaFundo, 60);
 }
+
 void desenhaCena() {
 	glClear(GL_COLOR_BUFFER_BIT);
 	if (pisca == false) {
@@ -99,7 +97,7 @@ void desenhaCena() {
 	glTexCoord2f(0, 1); glVertex3f(0, windowH, 0);
 	glEnd();
 	glDisable(GL_TEXTURE_2D);
-	
+
 	// -------------------- Personagem
 	glEnable(GL_TEXTURE_2D);
 	glBindTexture(GL_TEXTURE_2D, plane);
@@ -114,18 +112,16 @@ void desenhaCena() {
 	///------------------------------------------------------
 	//Inimigo
 
-
-
-	glEnable(GL_TEXTURE_2D);
-	glBindTexture(GL_TEXTURE_2D, enemy);
+	//glEnable(GL_TEXTURE_2D);
+	//glBindTexture(GL_TEXTURE_2D, enemy);
 	glBegin(GL_TRIANGLE_FAN);
-	glColor3f(1, 1, 1);
+	glColor3f(1, 0, 1);
 	glTexCoord2f(0, 0); glVertex3f(Xinimigo, Yinimigo, 0);
 	glTexCoord2f(1, 0); glVertex3f(Xinimigo + compinimigo, Yinimigo, 0);
 	glTexCoord2f(1, 1); glVertex3f(Xinimigo + compinimigo, Yinimigo + altinimigo, 0);
 	glTexCoord2f(0, 1); glVertex3f(Xinimigo, Yinimigo + altinimigo, 0);
 	glEnd();
-	glDisable(GL_TEXTURE_2D);
+//glDisable(GL_TEXTURE_2D);
 	//
 	// ----------------------------------------------------
 	if (left_down == true) {
@@ -153,7 +149,6 @@ void desenhaCena() {
 	glutSwapBuffers();
 }
 
-
 void atualizaCena(int valorqualquer) {
     if (pause == false) {
         if (esq == true) {
@@ -163,7 +158,15 @@ void atualizaCena(int valorqualquer) {
             X = X + 10;
         }
         if (cima == true) {
-            Y = Y + 10;
+            if(Y>=250) {
+                baixo = true;
+            }
+
+            if(!baixo){
+                Y = Y + 15;
+            } else {
+                Y = Y - 15;
+            }
         }
         else if (baixo == true) {
             Y = Y - 10;
@@ -178,7 +181,7 @@ void atualizaCena(int valorqualquer) {
 
         }
         if (Y < 0) {
-            baixo = false;
+            baixo = false; cima = false;
             Y = 0;
         }
         else if (Y > windowH - alt) {
@@ -210,8 +213,6 @@ void atualizaCena(int valorqualquer) {
     glutTimerFunc(33, atualizaCena, 0);
 }
 
-
-
 void inicializa() {
     glClearColor(0, 0, 0, 0);
     glEnable(GL_BLEND);
@@ -224,7 +225,6 @@ void inicializa() {
 
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 }
-
 
 void redimensionada(int width, int height) {
     if (width > height) {
@@ -246,7 +246,6 @@ void redimensionada(int width, int height) {
     glLoadIdentity();
 }
 
-
 void teclaPressionada(unsigned char key, int x, int y) {
     // vê qual tecla foi pressionada
     switch (key) {
@@ -267,13 +266,6 @@ void teclaPressionada(unsigned char key, int x, int y) {
     	if (cima == false) {
 		cima = true;
 		baixo = false;
-    	}
-        break;
-    case 83: //s
-    case 115: //S
-    	if (baixo == false) {
-		cima = false;
-		baixo = true;
     	}
         break;
     case 65: //a
@@ -303,33 +295,11 @@ void teclaPressionada(unsigned char key, int x, int y) {
     }
     glutPostRedisplay();
 }
-//void TeclasEspeciais(int key, int x, int y)
-//{
-//    if (key == GLUT_KEY_LEFT) {
-//        esq = true;
-//        dir = false;
-//    }
-//    if (key == GLUT_KEY_RIGHT) {
-//        dir = true;
-//        esq = false;
-//    }
-//    if (key == GLUT_KEY_DOWN) {
-//        dir = false;
-//        esq = false;
-//    }
-//    if (key == GLUT_KEY_UP) {
-//        dir = false;
-//        esq = false;
-//    }
-//    glutPostRedisplay();
-//}
-void teclaSolta(unsigned char key, int x, int y)
-{
+
+void teclaSolta(unsigned char key, int x, int y) {
     switch (key) {
     case 87: //w
     case 119: //W
-        cima = false;
-        baixo = false;
         break;
     case 83: //s
     case 115: //S
@@ -345,7 +315,7 @@ void teclaSolta(unsigned char key, int x, int y)
         break;
     case 68: //d
     case 100: //D
-    	if (dir == true) {    	
+    	if (dir == true) {
 		esq = false;
 		dir = false;
     	}
