@@ -56,7 +56,7 @@ void renderSceneComoJogar(GLuint voltarMenuTexture, bool mouseCimaVoltMenu, int 
 
     text += "\nPasso 3: Evite os inimigos para nao perder vidas.";
 
-    text += "\nPasso 4: Alcance a sa�da para completar o nivel.";
+    text += "\nPasso 4: Alcance a saida para completar o nivel.";
 
     float textPosition = altura;
     // Exibe o texto na tela
