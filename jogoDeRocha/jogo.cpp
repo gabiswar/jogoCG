@@ -97,6 +97,7 @@ void teclaPressionada(unsigned char key, int x, int y) {
     case 112: //p
         printf("P\n");
         break;
+
     case 87: //w
     case 119: //W
     	if (cima == false) {
@@ -104,6 +105,7 @@ void teclaPressionada(unsigned char key, int x, int y) {
 		baixo = false;
     	}
         break;
+
     case 83: //s
     case 115: //S
     	if (baixo == false) {
@@ -111,6 +113,7 @@ void teclaPressionada(unsigned char key, int x, int y) {
 		baixo = true;
     	}
         break;
+
     case 65: //a
     case 97: //A
     	if (esq == false) {
@@ -125,6 +128,7 @@ void teclaPressionada(unsigned char key, int x, int y) {
 		dir = true;;
     	}
         break;
+
     case 27:      // Tecla "ESC"
         exit(0);  // Sai da aplicação
         break;
@@ -138,15 +142,34 @@ void teclaPressionada(unsigned char key, int x, int y) {
 
 void teclaSolta(unsigned char key, int x, int y) {
     switch (key) {
-        case 80: //P
+        case 87: //w
+        case 119: //W
+            cima = false;
+            break;
 
+        case 83: //s
+        case 115: //S
+            baixo = false;
+            break;
+
+        case 65: //a
+        case 97: //A
+            esq = false;
+            break;
+
+        case 68: //d
+        case 100: //D
+            dir = false;
+            break;;
+
+        /*case 80: //P
             printf("SAI no P");
             break;
         case 68: //p
             printf("SAI no d");
             break;
         default:
-            break;
+            break;*/
     }
     glutPostRedisplay();
 }
@@ -195,16 +218,16 @@ void updateScene(int value) {
 
     if (pause == false) {
         if (esq == true) {
-            X = X - 10;
+            X = X - 5;
         }
         else if (dir == true) {
-            X = X + 10;
+            X = X + 5;
         }
         if (cima == true) {
-            Y = Y + 10;
+            Y = Y + 5;
         }
         else if (baixo == true) {
-            Y = Y - 10;
+            Y = Y - 5;
         }
         if (X < 0) {
             esq = false;
