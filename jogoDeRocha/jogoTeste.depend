@@ -1,0 +1,148 @@
+# depslib dependency file v1.0
+1686409279 source:c:\users\gabri\onedrive\documentos\cefet\cg\jogoteste\main.cpp
+	<GL/glew.h>
+	<GL/freeglut.h>
+	<math.h>
+	<SOIL/SOIL.h>
+	<stdio.h>
+	<iostream>
+	"telaMenu.h"
+	"jogo.h"
+
+1686144340 c:\users\gabri\onedrive\documentos\cefet\cg\jogoteste\telamenu.h
+	<GL/glew.h>
+	<GL/freeglut.h>
+	<SOIL/SOIL.h>
+	<stdio.h>
+	<iostream>
+
+1686144415 source:c:\users\gabri\onedrive\documentos\cefet\cg\jogoteste\telamenu.cpp
+	"telaMenu.h"
+	<iostream>
+
+1686415776 source:c:\users\gabri\onedrive\documentos\cefet\cg\jogoteste\jogo.cpp
+	"jogo.h"
+	<iostream>
+	<math.h>
+
+1686409279 c:\users\gabri\onedrive\documentos\cefet\cg\jogoteste\jogo.h
+	<GL/glew.h>
+	<GL/freeglut.h>
+	<SOIL/SOIL.h>
+	<stdio.h>
+	<iostream>
+
+1686528159 source:c:\users\gabri\onedrive\documentos\cefet\cg\jogoderocha\jogo.cpp
+	"jogo.h"
+	<iostream>
+	<math.h>
+	<bits/stdc++.h>
+	<vector>
+	<cstdlib>
+	<ctime>
+	<cmath>
+
+1686528030 c:\users\gabri\onedrive\documentos\cefet\cg\jogoderocha\jogo.h
+	<GL/glew.h>
+	<GL/freeglut.h>
+	<SOIL/SOIL.h>
+	<stdio.h>
+	<iostream>
+
+1686528505 source:c:\users\gabri\onedrive\documentos\cefet\cg\jogoderocha\main.cpp
+	<GL/glew.h>
+	<GL/freeglut.h>
+	<math.h>
+	<SOIL/SOIL.h>
+	<stdio.h>
+	<iostream>
+	"telaMenu.h"
+	"jogo.h"
+
+1686144340 c:\users\gabri\onedrive\documentos\cefet\cg\jogoderocha\telamenu.h
+	<GL/glew.h>
+	<GL/freeglut.h>
+	<SOIL/SOIL.h>
+	<stdio.h>
+	<iostream>
+
+1686524338 source:c:\users\gabri\onedrive\documentos\cefet\cg\jogoderocha\telamenu.cpp
+	"telaMenu.h"
+	<iostream>
+
+1686618327 source:c:\users\pc\desktop\jogocg-main\jogoderocha\main.cpp
+	<GL/glew.h>
+	<GL/freeglut.h>
+	<math.h>
+	<SOIL/SOIL.h>
+	<stdio.h>
+	<iostream>
+	"telaMenu.h"
+	"jogo.h"
+
+1686528772 c:\users\pc\desktop\jogocg-main\jogoderocha\telamenu.h
+	<GL/glew.h>
+	<GL/freeglut.h>
+	<SOIL/SOIL.h>
+	<stdio.h>
+	<iostream>
+
+1686618339 c:\users\pc\desktop\jogocg-main\jogoderocha\jogo.h
+	<GL/glew.h>
+	<GL/freeglut.h>
+	<SOIL/SOIL.h>
+	<stdio.h>
+	<iostream>
+
+1686528772 source:c:\users\pc\desktop\jogocg-main\jogoderocha\telamenu.cpp
+	"telaMenu.h"
+	<iostream>
+
+1686618883 source:c:\users\pc\desktop\jogocg-main\jogoderocha\jogo.cpp
+	"jogo.h"
+	<iostream>
+	<math.h>
+	<bits/stdc++.h>
+	<vector>
+	<cstdlib>
+	<ctime>
+	<cmath>
+
+1686621579 source:c:\users\gabri\onedrive\documentos\cefet\cg\jogo\jogoderocha\jogo.cpp
+	"jogo.h"
+	<iostream>
+	<math.h>
+	<bits/stdc++.h>
+	<vector>
+	<cstdlib>
+	<ctime>
+	<cmath>
+
+1686618339 c:\users\gabri\onedrive\documentos\cefet\cg\jogo\jogoderocha\jogo.h
+	<GL/glew.h>
+	<GL/freeglut.h>
+	<SOIL/SOIL.h>
+	<stdio.h>
+	<iostream>
+
+1686621827 source:c:\users\gabri\onedrive\documentos\cefet\cg\jogo\jogoderocha\main.cpp
+	<GL/glew.h>
+	<GL/freeglut.h>
+	<math.h>
+	<SOIL/SOIL.h>
+	<stdio.h>
+	<iostream>
+	"telaMenu.h"
+	"jogo.h"
+
+1686621706 c:\users\gabri\onedrive\documentos\cefet\cg\jogo\jogoderocha\telamenu.h
+	<GL/glew.h>
+	<GL/freeglut.h>
+	<SOIL/SOIL.h>
+	<stdio.h>
+	<iostream>
+
+1686622060 source:c:\users\gabri\onedrive\documentos\cefet\cg\jogo\jogoderocha\telamenu.cpp
+	"telaMenu.h"
+	<iostream>
+
