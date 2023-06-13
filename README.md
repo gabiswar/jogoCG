@@ -1,4 +1,4 @@
-Integrantes:
+Integrantes:<br>
 
 Gabriela Guerra Malvar Pereira - 20203018614
 Henrique Lopes Maciel - 20213008362
