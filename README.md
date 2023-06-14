@@ -1,3 +1,5 @@
+sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev libglew-dev
+
 Integrantes:<br>
 
 Gabriela Guerra Malvar Pereira - 20203018614<br>
