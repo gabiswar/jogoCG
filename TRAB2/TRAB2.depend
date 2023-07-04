@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1688443734 source:c:\users\gabri\onedrive\documentos\cefet\cg\trab2\main.cpp
+	<GL/glew.h>
+	<GL/freeglut.h>
+	<math.h>
+	<SOIL/SOIL.h>
+	<stdio.h>
+	<iostream>
+	<GL/glu.h>
+
